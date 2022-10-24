@@ -1,0 +1,68 @@
+{
+  "build": {
+    "beforeDevCommand": "cd Pluto/frontend && npm install",
+    "beforeBuildCommand": "cd Pluto/frontend && npm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../src",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "pluto-tauri",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.tauri.dev",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": "script-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "title": "Pluto Desktop Tauri Edition",
+        "center": true,
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "width": 800,
+        "fileDropEnabled": true
+      }
+    ]
+  }
+}
